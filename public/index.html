@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <main>
+        <section class="left-section">
+            <h1><br>Chat Room</h1>
+
+
+
+                <div class="enter-name">
+                    <span class="profile">
+                        <img src="./images/avatar.png" class="avatar">
+                        <input id="file" type="file" class="file">
+                        <label class="upload" for="file" for="file" >upload <span class="ab"></span></label>
+                    </span>
+
+                    <input class="input"  type="text" placeholder="enter-name">
+                    <button class="input-btn">Enter<span class="ss"></span></button>
+                </div>
+
+                  <h2 class="welcome">Welcome You Can Chat Now.</h2>
+                <footer>
+                    <p>All Rights Reserved. Designes By Prosper. Powered By Codeprof Academy.</p>
+                </footer>
+
+
+
+        </section>
+
+        <section class="right-section">
+
+            <div class="start-chat">
+                     <button class="start">Start Chat <span class="cc"></span></button>
+            </div>
+
+
+            <div class="chatting-page">
+
+                    
+                <div class="chat-container">
+                    
+                        <div class="header">
+                            <span class="left-header">
+                                <img class="go-back" src="./images/back.png" width="30">
+                                <img class="prof" src="./images/ava.png" alt="" width="30">
+                                <h3 class="names"></h3>
+                            </span>
+    
+                            <span class="right-header">
+                                <img src="./images/phone.png" alt="" width="30">
+                                <img src="./images/facetime.png" alt="" width="30">
+                            </span>
+    
+                        </div>
+    
+                        <!-- chating env -->
+                        <div class="chatting-env">
+
+                                <!-- <div class="left">
+                                        <h3 class="name">prosper</h3>
+                                        <p>Lorem ipsum dolor  adipisicing elit. Exercitati</p>
+                                        <h4 class="time">00000000000000</h4>
+        
+                                </div>
+        
+                                <div class="right">
+                                    <h3 class="name">prosper</h3>
+                                    <p>Exercitationem dignissimos nihil mkojdljni jndkqunwudo kjnkjqbquae placeat? Cum qu</p>
+                                    <h4 class="time">00000000000000</h4>
+                                </div>                                 -->
+                         
+    
+                        </div>
+    
+
+                        <!-- send messgae -->
+                        <form class="send-message-box">
+    
+    
+                            <textarea class="texting" placeholder="start typing"></textarea>
+
+                            <button type="submit"><img class="send-text" src="./images//send.png" alt="" width="25"></button>
+    
+    
+                        </form>
+
+                </div>
+            </div>
+
+        </section>
+
+     </main>
+
+
+     <script src="/socket.io/socket.io.js"></script>
+
+     <script src="chat.js"></script>
+
+</body>
+</html>

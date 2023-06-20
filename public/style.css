@@ -1,0 +1,1025 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: whitesmoke;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+/* left-section */
+
+.left-section{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(182, 29, 172, 0.877),rgb(59, 8, 65));
+    gap: 10px;
+
+}
+
+.left-section h1{
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+.left-section h2{
+    display: none;
+    color: white;
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    transition:  all .5s ease;
+}
+
+
+.enter-name{
+    width: 50%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(216, 112, 202);
+    border-radius: 5px;
+    gap: 15px;
+    margin-bottom: 100px;
+}
+
+.profile{
+    width: 100%;
+    min-height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.profile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 3px;
+}
+
+.file{
+    display: none;
+}
+
+.upload{
+    width: 85px;
+    padding: 5px;
+    border-radius: 25px;
+    border: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    z-index: 1000;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+
+.ab{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: purple;
+    left: 0;
+    top: 0;
+    border-radius: 25px;
+    opacity: 0;
+    transition: all .4s ease;
+    z-index: -1;
+    color: white;
+
+}
+
+.upload:hover .ab{
+      opacity: 1;
+      height: 100%;
+      color: black;
+}
+
+.input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-radius: 3px;
+}
+
+.input::placeholder{
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-btn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
+}
+
+
+.ss{
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background-color: purple;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition:  all .3s ease;
+    z-index: -1;
+}
+
+.input-btn:hover .ss{
+    opacity: 1;
+    height: 100%;
+    color: white;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-self: auto;
+    align-items: center;
+    background-color: rgb(216, 112, 202);
+    color: white;
+    position: absolute;
+    bottom: 0;
+}
+
+footer p{
+    font-size: 14px;
+}
+
+
+.right-section{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    position: relative;
+
+}
+
+
+/* start chat */
+.start-chat{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.start{
+    width: 130px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(216, 112, 202);
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.cc{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: purple;
+    width: 100%;
+    height: 0;
+    border-radius: 25px;
+    opacity: 0;
+    transition: all .3s ease;
+    z-index: -1;
+
+}
+
+.start:hover .cc{
+     opacity: 1;
+     height: 100%;
+}
+
+
+/* chating page */
+.chatting-page{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container{
+    width: 45%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 10px solid purple;
+    border-radius: 20px;
+}
+
+
+
+.header{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8px;
+    background-color: white;
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+}
+
+
+
+.left-header{
+    width: 50%;
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap: 7px;
+}
+
+.go-back{
+    cursor: pointer;
+}
+
+.left-header img{
+    width: 25px;
+}
+
+.left-header .prof{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.left-header h3{
+    font-size: 13px;
+    text-align: center;
+}
+
+.right-header{
+    width: 50%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.right-header img{
+    width: 20px;
+    cursor: pointer;
+}
+
+.chatting-env{
+    width: 100%;
+    height:80%;
+    padding:  20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:20px;
+    overflow-y:scroll;
+}
+
+.chatting-env::-webkit-scrollbar{
+    appearance: none;
+    width: 4px;
+    
+}
+
+.chatting-env::-webkit-scrollbar-thumb{
+    background-color: palevioletred;
+    border-radius: 4px;
+}
+
+
+
+
+
+.left{
+    max-width: 90%;
+    background-color: white;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.left h3{
+    font-size: 14px;
+    color: purple;
+}
+
+.left p{
+    font-size: 12px;
+}
+
+
+.time{
+    font-size: 11px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+
+.right{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 8px;
+    border-radius: 10px;
+    align-self:flex-end ;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom-right-radius: 0;
+    background-color: plum;
+}
+
+
+.right p{
+   font-size: 11px;
+   color: white;
+}
+
+.right h3{
+    font-size: 14px;
+    color: purple;
+}
+
+.right p{
+    font-size: 12px;
+    color: white;
+}
+
+
+.time{
+    font-size: 13px;
+    font-weight: 100;
+    font-style: italic;
+    color: black;
+}
+
+/* send message */
+
+.send-message-box{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-right: 5px;
+}
+.send-message-box button{
+    border: none;
+    background: transparent;
+}
+
+.texting{
+    width: 85%;
+    height: 40px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+}
+
+.texting::-webkit-scrollbar{
+    width: 2px;
+    appearance: none;
+}
+
+.texting::placeholder{
+    font-size: 15px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.send-text{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: plum;
+    border-radius: 50%;
+    padding: 4px;
+    transition: all .2s ease;
+}
+
+.send-text:hover{
+    background-color: #ccc;
+}
+
+
+
+
+
+
+
+@media(max-width:450px){
+    /* left-section */
+
+    main{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    
+    }
+    
+.left-section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(rgba(182, 29, 172, 0.877),rgb(59, 8, 65));
+    gap: 10px;
+
+}
+
+.left-section h1{
+    font-size: 45px;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+.left-section h2{
+    display: none;
+    color: white;
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    transition:  all .5s ease;
+}
+
+
+.enter-name{
+    width: 50%;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    background-color: rgb(216, 112, 202);
+    border-radius: 5px;
+    gap: 15px;
+    margin-bottom: 100px;
+}
+
+.profile{
+    width: 100%;
+    min-height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.profile img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 3px;
+}
+
+.file{
+    display: none;
+}
+
+.upload{
+    width: 85px;
+    padding: 5px;
+    border-radius: 25px;
+    border: 1px solid white;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    position: relative;
+    z-index: 1000;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+
+.ab{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: purple;
+    left: 0;
+    top: 0;
+    border-radius: 25px;
+    opacity: 0;
+    transition: all .4s ease;
+    z-index: -1;
+    color: white;
+
+}
+
+.upload:hover .ab{
+      opacity: 1;
+      height: 100%;
+      color: black;
+}
+
+.input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-radius: 3px;
+}
+
+.input::placeholder{
+    font-size: 17px;
+    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.input-btn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
+}
+
+
+.ss{
+    position: absolute;
+    height: 0;
+    width: 100%;
+    background-color: purple;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition:  all .3s ease;
+    z-index: -1;
+}
+
+.input-btn:hover .ss{
+    opacity: 1;
+    height: 100%;
+    color: white;
+}
+
+
+
+footer{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-self: auto;
+    align-items: center;
+    background-color: rgb(216, 112, 202);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+
+footer p{
+    font-size: 14px;
+}
+
+/* right section */
+.right-section{
+    width: 100%;
+    min-height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    position: relative;
+
+}
+
+
+/* start chat */
+.start-chat{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.start{
+    width: 130px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    background-color: rgb(216, 112, 202);
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.cc{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: purple;
+    width: 100%;
+    height: 0;
+    border-radius: 25px;
+    opacity: 0;
+    transition: all .3s ease;
+    z-index: -1;
+
+}
+
+.start:hover .cc{
+     opacity: 1;
+     height: 100%;
+}
+
+
+/* chating page */
+.chatting-page{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-container{
+    width: 45%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 10px solid purple;
+    border-radius: 20px;
+}
+
+
+
+.header{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8px;
+    background-color: white;
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+}
+
+
+
+.left-header{
+    width: 50%;
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap: 7px;
+}
+
+.go-back{
+    cursor: pointer;
+}
+
+.left-header img{
+    width: 25px;
+}
+
+.left-header .prof{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.left-header h3{
+    font-size: 13px;
+    text-align: center;
+}
+
+.right-header{
+    width: 50%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.right-header img{
+    width: 20px;
+    cursor: pointer;
+}
+
+.chatting-env{
+    width: 100%;
+    height:80%;
+    padding:  20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:20px;
+    overflow-y:scroll;
+}
+
+.chatting-env::-webkit-scrollbar{
+    appearance: none;
+    width: 4px;
+    
+}
+
+.chatting-env::-webkit-scrollbar-thumb{
+    background-color: palevioletred;
+    border-radius: 4px;
+}
+
+
+
+
+
+.left{
+    max-width: 90%;
+    background-color: white;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.left h3{
+    font-size: 14px;
+    color: purple;
+}
+
+.left p{
+    font-size: 12px;
+}
+
+
+.time{
+    font-size: 11px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+
+.right{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 8px;
+    border-radius: 10px;
+    align-self:flex-end ;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom-right-radius: 0;
+    background-color: plum;
+}
+
+
+.right p{
+   font-size: 11px;
+   color: white;
+}
+
+.right h3{
+    font-size: 14px;
+    color: purple;
+}
+
+.right p{
+    font-size: 12px;
+    color: white;
+}
+
+
+.time{
+    font-size: 13px;
+    font-weight: 100;
+    font-style: italic;
+    color: black;
+}
+
+/* send message */
+
+.send-message-box{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding-right: 5px;
+}
+.send-message-box button{
+    border: none;
+    background: transparent;
+}
+
+.texting{
+    width: 85%;
+    height: 40px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+}
+
+.texting::-webkit-scrollbar{
+    width: 2px;
+    appearance: none;
+}
+
+.texting::placeholder{
+    font-size: 15px;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.send-text{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: plum;
+    border-radius: 50%;
+    padding: 4px;
+    transition: all .2s ease;
+}
+
+.send-text:hover{
+    background-color: #ccc;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* animation error */
+
+.error{
+    animation: shake;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1s;
+}
+
+
+@keyframes shake{
+
+    0%{
+        border: 1px solid red;
+         transform: translateX(2px);
+    }
+
+    25%{
+        border: 1px solid red;
+         transform: translateX(-2px);
+    }
+
+    50%{
+        border: 1px solid red;
+         transform: translateX(2px);
+    }
+
+    75%{
+        border: 1px solid red;
+         transform: translateX(-2px);
+    }
+
+    100%{
+        border: 1px solid red;
+         transform: translateX(2px);
+    }
+}
